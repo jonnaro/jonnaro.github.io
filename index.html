@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>firebase analytics learnings</title>
 
   <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>
+
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- logic for formatting -->
+<script src="/js/event_formatter.js"></script>
 
 </head>
 <body>
@@ -31,11 +37,16 @@
     </div>
 
     <div class="row">
-        <form class="col s12">
+        <form id="event_formatter" class="col s12">
           <div class="row">
             <div class="input-field col s12">
               <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">event log string</label>
+              <label for="textarea1">paste event log string here</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="file-field input-field">
+              <input type="submit" id="submit1" class="btn waves-effect waves-light" value="Submit"/>
             </div>
           </div>
         </form>
@@ -44,11 +55,18 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col s12">
+    <p><span id="event_output"></span></p>
+
+  </div>
+</div>
+
 
 <div class="row">
   <form class="col s12">
     <div class="row">
-      <b>Firebase event limits</b>
+      <b>Firebase event processing limits</b>
       <ul>
         <li>length of event name: 40 characters</li>
         <li>event parameters per event: 25</li>
