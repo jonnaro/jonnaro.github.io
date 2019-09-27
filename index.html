@@ -2,17 +2,64 @@
 <html>
 <head>
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 </head>
 <body>
+<div class="container">
+<!-- Content here -->
+
+<div class ="row">
+  <div class="col s12">
+  <h3>Firebase Analytics Utilities</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+
+    <div class="card-panel orange lighten-2">
+    <h4>logcat event formatter</h4>
+    <p>Paste in a firebase event log string from logcat and see it in a way that
+      won't make you go crazy.</p>
+    </div>
+
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">event log string</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+  </div>
+</div>
 
 
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <b>Firebase event limits</b>
+      <ul>
+        <li>length of event name: 40 characters</li>
+        <li>event parameters per event: 25</li>
+        <li>length of event parameter name: 40 characters</li>
+        <li>length of event parameter value: 100 characters</li>
+      </ul>
+    </div>
+  </form>
+</div>
 
 
+</div>
 </body>
 </html>
